@@ -49,7 +49,9 @@ li {
 
 /*================== HOME ======================*/
 #home {
-  max-width: 1920px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .nav-Container {
   width: 100%;
@@ -60,64 +62,50 @@ li {
 }
 .navbar {
   margin-left: 50px;
+  margin-top: 90%;
 }
 nav ul li a {
   font-family: var(--title-poppins);
-  font-size: 200px;
-  font-weight: var(--bold-600);
-}
-nav ul li a:hover {
-  animation-name: anim;
-  animation-duration: 0.6s;
-  animation-timing-function: linear;
+  font-size: 60px;
   font-weight: var(--light-100);
+  color: var(--noneActiveText);
 }
-@keyframes anim {
-  0% {
-    font-weight: var(--bold-600);
-  }
-  10% {
-    letter-spacing: -2px;
-    font-weight: var(--regular-400);
-  }
-  20% {
-    font-weight: var(--light-300);
-  }
-  30% {
-    letter-spacing: -7px;
-    font-weight: var(--light-200);
-  }
-  40% {
-    letter-spacing: -2px;
-    font-weight: var(--light-100);
-  }
 
-  50% {
-    letter-spacing: 0px;
-    font-weight: var(--light-200);
-  }
-  60% {
-    letter-spacing: 2px;
-    font-weight: var(--light-200);
-  }
+/*================== ABOUT ======================*/
 
-  70% {
-    letter-spacing: 7px;
-    font-weight: var(--light-200);
-  }
-  80% {
-    letter-spacing: 2px;
-    font-weight: var(--light-200);
-  }
-  90% {
-    letter-spacing: 0px;
-    font-weight: var(--light-200);
-  }
-  100% {
-    letter-spacing: 0px;
-    font-weight: var(--light-100);
-  }
+.active {
+  color: white;
 }
+.about {
+  margin-top: 10%;
+}
+.aboutContainer {
+  width: 90%;
+}
+.aboutContainer h1 {
+  font-family: var(--titleSkills);
+  font-size: 86px;
+  text-align: left;
+  margin-top: 20%;
+  transition: 0.2s all ease;
+}
+.gameName {
+  padding-top: 20px;
+}
+.aboutContainer h2 {
+  font-family: var(--homeMainTitle);
+  font-size: 18px;
+  margin-left: 100px;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  transition: 0.2s all ease;
+}
+.aboutContainer h1:hover,
+h2:hover {
+  transform: scale(1.1);
+  letter-spacing: 3px;
+}
+
 /*================== MEDIA ======================*/
 
 @media screen and (min-width: 1025px) {
