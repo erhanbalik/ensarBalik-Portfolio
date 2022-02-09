@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--============================= FONTS ==================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--============================= CSS ==================================-->
+    <link rel="stylesheet" href="./contactStyle.css" />
+    <!--============================= FAVICON/NAME ==================================-->
+    <title>Ensar BALIK | Profile</title>
+  </head>
+  <body>
+    <div class="home" id="home">
+      <div class="nav-Container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="./profile.html">PROFILE</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./contact.html" class="active">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contact" id="contact">
+        <div class="contact-container">
+          <form
+            action="https://formsubmit.co/erhanbalik93@gmail.com"
+            method="POST"
+          >
+            <h3>Contact Me</h3>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+            <input type="hidden" name="_template" value="box" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your E-mail"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Type Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="sideAnimation">
+        <div class="side1"></div>
+        <div class="side2"></div>
+      </div>
+    </div>
+  </body>
+</html>

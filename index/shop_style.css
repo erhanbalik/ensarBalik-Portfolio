@@ -1,0 +1,354 @@
+:root {
+  /*==================FONT-TYPES======================*/
+  --homeMainTitle: TS_Block, sans-serif;
+  --title-poppins: "Poppins", sans-serif;
+  --titleSkills: Akira, sans-serif;
+
+  /*==================FONT-Weight======================*/
+  --light-100: 100;
+  --light-200: 200;
+  --light-300: 300;
+  --regular-400: 400;
+  --bold-600: 600;
+
+  /*==================FONT-Size======================*/
+  --noneActiveText: grey;
+}
+
+/*================== CUSTOM-FONTs ======================*/
+@font-face {
+  font-family: Akira;
+  src: url("/assets/fonts/Akira.otf");
+}
+@font-face {
+  font-family: TS_Block;
+  src: url("/assets/fonts/TS_Block.ttf");
+}
+
+/*================== BODY/RESET ======================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  max-width: 1920px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*================== HOME ======================*/
+#home {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.nav-Container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.navbar {
+  margin-left: 50px;
+  margin-top: 90%;
+}
+nav ul li a {
+  font-family: var(--title-poppins);
+  font-size: 50px;
+  font-weight: var(--light-100);
+  color: var(--noneActiveText);
+}
+.navbar .active {
+  color: white;
+}
+
+/*================== ABOUT ======================*/
+
+.about {
+  margin-top: 10%;
+}
+.aboutContainer {
+  width: 90%;
+}
+.aboutContainer a {
+  color: var(--noneActiveText);
+}
+.aboutContainer h1 {
+  font-family: var(--titleSkills);
+  font-size: 74px;
+  text-align: left;
+  margin-top: 35%;
+}
+.gameName {
+  padding-top: 20px;
+}
+.aboutContainer h2 {
+  font-family: var(--homeMainTitle);
+  font-size: 18px;
+  margin-left: 100px;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  transition: 0.2s all ease;
+}
+
+.aboutContainer .active {
+  color: white;
+}
+/*================== GAMES ======================*/
+.gameContainer button {
+  width: 300px;
+  height: 50px;
+  background-color: rgb(47, 102, 102);
+  margin-left: 50%;
+  margin-top: 10%;
+  border-radius: 5px;
+  border: none;
+}
+.gameContainer button a {
+  font-size: 20px;
+  font-family: var(--title-poppins);
+  font-weight: var(--bold-600);
+}
+.gameImages {
+  margin-left: 50%;
+  margin-top: 10%;
+}
+.gameImages img {
+  height: 300px;
+  margin-top: 50px;
+}
+.gameName_invis {
+  visibility: hidden;
+}
+/*================== MEDIA ======================*/
+
+@media screen and (max-width: 1640px) {
+  #home {
+    max-width: 1641px;
+    display: grid;
+    grid-template-columns: 0.3fr 0.6fr 0.6fr;
+  }
+  nav ul li a {
+    font-size: 40px;
+  }
+  .aboutContainer h1 {
+    font-size: 56px;
+  }
+  .gameImages img {
+    height: 230px;
+  }
+  .gameContainer button {
+    width: 200px;
+    margin-left: 20%;
+    margin-top: 20%;
+  }
+  .gameImages {
+    margin-left: 10%;
+    margin-top: 30%;
+  }
+}
+
+@media (min-width: 1191px) and (max-width: 1441px) {
+  #home {
+    max-width: 1441px;
+    display: grid;
+    grid-template-columns: 0.35fr 0.6fr 0.6fr;
+  }
+  nav ul li a {
+    font-size: 38px;
+  }
+  .aboutContainer h1 {
+    font-size: 52px;
+    margin-top: 40%;
+  }
+  .gameImages img {
+    height: 200px;
+  }
+  .gameContainer button {
+    width: 200px;
+    margin-left: 25%;
+    margin-top: 20%;
+  }
+  .gameImages {
+    margin-left: 8%;
+    margin-top: 30%;
+  }
+  .aboutContainer h2 {
+    font-size: 16px;
+    margin-left: 100px;
+    letter-spacing: 1px;
+  }
+}
+@media (min-width: 968px) and (max-width: 1190px) {
+  #home {
+    max-width: 1190px;
+    display: grid;
+    grid-template-columns: 0.35fr 0.6fr 0.6fr;
+  }
+  nav ul li a {
+    font-size: 30px;
+  }
+  .aboutContainer h1 {
+    font-size: 42px;
+    margin-top: 50%;
+  }
+  .gameImages img {
+    height: 170px;
+  }
+  .gameContainer button {
+    width: 170px;
+    margin-left: 25%;
+    margin-top: 20%;
+  }
+  .gameImages {
+    margin-left: 5%;
+    margin-top: 40%;
+  }
+  .aboutContainer h2 {
+    font-size: 14px;
+    margin-left: 70px;
+    letter-spacing: 1px;
+  }
+  .gameContainer button a {
+    font-size: 16px;
+    font-weight: var(--regular-400);
+  }
+}
+
+/*================== SMALL-SCREEN ======================*/
+
+@media screen and (max-width: 967px) {
+  #home {
+    max-width: 967px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-Container,
+  .aboutContainer {
+    margin-left: -140%;
+  }
+
+  .aboutContainer h1 {
+    font-size: 42px;
+    margin-top: 50%;
+  }
+  .gameImages img {
+    height: 200px;
+  }
+  .gameName_invis {
+    visibility: visible;
+    font-family: var(--homeMainTitle);
+    font-size: 22px;
+  }
+
+  .gameContainer button {
+    width: 200px;
+    margin-left: 0%;
+    margin-top: 20%;
+  }
+  .gameImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutContainer h2 {
+    font-size: 14px;
+    margin-left: 70px;
+    letter-spacing: 1px;
+  }
+  .gameContainer button a {
+    font-size: 16px;
+    font-weight: var(--regular-400);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #home {
+    max-width: 769px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-Container,
+  .aboutContainer {
+    margin-left: -160%;
+  }
+
+  .aboutContainer h1 {
+    font-size: 42px;
+    margin-top: 50%;
+  }
+  .gameImages img {
+    height: 200px;
+  }
+
+  .gameContainer button {
+    width: 200px;
+    margin-left: 0%;
+    margin-top: 20%;
+  }
+  .gameImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutContainer h2 {
+    font-size: 14px;
+    margin-left: 70px;
+    letter-spacing: 1px;
+  }
+  .gameContainer button a {
+    font-size: 16px;
+    font-weight: var(--regular-400);
+  }
+}
+
+@media screen and (max-width: 641px) {
+  #home {
+    max-width: 641px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-Container,
+  .aboutContainer {
+    margin-left: -160%;
+  }
+  .gameImages img {
+    height: 180px;
+  }
+}
+@media screen and (max-width: 481px) {
+  #home {
+    max-width: 481px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-Container,
+  .aboutContainer {
+    margin-left: -180%;
+  }
+  .gameImages img {
+    height: 150px;
+  }
+}
