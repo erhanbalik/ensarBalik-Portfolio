@@ -51,7 +51,7 @@ li {
 #home {
   max-width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr;
 }
 .nav-Container {
   width: 100%;
@@ -155,30 +155,6 @@ button:hover {
   margin-top: 10%;
   margin-left: -130%;
 }
-/* .side2 {
-  animation: sideAnim 25s infinite linear;
-  -moz-animation: sideAnim 25s infinite linear;
-  -ms-animation: sideAnim 25s infinite linear;
-  -o-animation: sideAnim 25s infinite linear;
-  -webkit-animation: sideAnim 25s infinite linear;
-  background: radial-gradient(
-    circle at 0% 0%,
-    rgb(105, 188, 255),
-    rgb(90, 201, 205)
-  );
-  border-radius: 10% 25% 10% 25%;
-  box-shadow: 0 -2vmin 4vmin rgb(97, 252, 213) inset,
-    0 2vmin 4vmin rgb(161, 116, 252) inset, 0 5vmin 7vmin rgb(0, 19, 128) inset;
-  content: "";
-  filter: drop-shadow(0 -2vmin 4vmin rgb(191, 191, 216))
-    drop-shadow(0 2vmin 4vmin rgb(112, 218, 204))
-    drop-shadow(0vmin 3vmin 7vmin rgb(140, 104, 238))
-    drop-shadow(0 0 5vmin rgb(123, 85, 211));
-  height: 20vmin;
-  width: 20vmin;
-  margin-top: 20%;
-  margin-left: 10%;
-} */
 
 @keyframes sideAnim {
   0% {
