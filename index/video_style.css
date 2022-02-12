@@ -35,7 +35,7 @@
 
 body {
   background-color: rgb(0, 0, 0);
-  overflow: hidden;
+  overflow-x: hidden;
   max-width: 1920px;
 }
 
@@ -125,10 +125,11 @@ nav ul li a {
   margin-left: 50%;
   margin-top: 10%;
 }
-.gameImages img {
+.gameImages video {
   height: 300px;
-  margin-top: 50px;
+  margin-top: 30%;
 }
+
 .gameName_invis {
   visibility: hidden;
 }
@@ -146,7 +147,7 @@ nav ul li a {
   .aboutContainer h1 {
     font-size: 56px;
   }
-  .gameImages img {
+  .gameImages video {
     height: 230px;
   }
   .gameContainer button {
@@ -173,7 +174,7 @@ nav ul li a {
     font-size: 52px;
     margin-top: 40%;
   }
-  .gameImages img {
+  .gameImages video {
     height: 200px;
   }
   .gameContainer button {
@@ -204,7 +205,7 @@ nav ul li a {
     font-size: 42px;
     margin-top: 50%;
   }
-  .gameImages img {
+  .gameImages video {
     height: 170px;
   }
   .gameContainer button {
@@ -246,8 +247,8 @@ nav ul li a {
     font-size: 42px;
     margin-top: 50%;
   }
-  .gameImages img {
-    height: 200px;
+  .gameImages video {
+    height: 230px;
   }
   .gameName_invis {
     visibility: visible;
@@ -294,8 +295,8 @@ nav ul li a {
     font-size: 42px;
     margin-top: 50%;
   }
-  .gameImages img {
-    height: 200px;
+  .gameImages video {
+    height: 220px;
   }
 
   .gameContainer button {
@@ -332,13 +333,13 @@ nav ul li a {
   .aboutContainer {
     margin-left: -160%;
   }
-  .gameImages img {
-    height: 180px;
+  .gameImages video {
+    height: 200px;
   }
 }
 @media screen and (max-width: 481px) {
   #home {
-    max-width: 481px;
+    max-width: 475px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -347,8 +348,10 @@ nav ul li a {
   .nav-Container,
   .aboutContainer {
     margin-left: -180%;
+    display: none;
   }
-  .gameImages img {
-    height: 150px;
+  .gameImages video {
+    height: 180px;
+    margin-left: -10%;
   }
 }

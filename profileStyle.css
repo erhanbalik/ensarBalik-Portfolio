@@ -36,8 +36,9 @@
 
 body {
   background-color: rgb(0, 0, 0);
-  overflow: hidden;
-  max-width: 1920px;
+  overflow-x: hidden;
+  max-width: 100%;
+  max-height: 100vh;
 }
 
 a {
@@ -99,6 +100,9 @@ li {
 .menu .social-media li a i h4 {
   padding: 0 10px;
   color: #fff;
+  font-family: var(--title-poppins);
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 /*================== HOME ======================*/
@@ -116,7 +120,7 @@ li {
 }
 .navbar {
   margin-left: 50px;
-  margin-top: 90%;
+  margin-top: 80%;
 }
 nav ul li a {
   font-family: var(--title-poppins);
@@ -145,7 +149,7 @@ nav ul li a {
   font-size: 20px;
   letter-spacing: 2px;
 }
-/* SOCIAL MEDIA */
+/* -------------------SOCIAL MEDIA -----------------*/
 .socialmedia {
   display: flex;
   flex-direction: column;
@@ -193,25 +197,36 @@ nav ul li a {
   #home {
     max-width: 1440px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
   }
 
   nav ul li a {
-    font-family: var(--title-poppins);
     font-size: 50px;
-    font-weight: var(--light-100);
-    color: var(--noneActiveText);
+  }
+  .profileContainer h1 {
+    font-size: 42px;
+    letter-spacing: 8px;
+  }
+  .profileContainer p {
+    letter-spacing: 1px;
   }
 }
 @media (min-width: 968px) and (max-width: 1190px) {
   #home {
     max-width: 1190px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
 
   nav ul li a {
     font-size: 42px;
+  }
+  .profileContainer h1 {
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+  .profileContainer p {
+    letter-spacing: 1px;
   }
 }
 
@@ -221,11 +236,27 @@ nav ul li a {
   #home {
     max-width: 967px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .nav-Container {
+    display: none;
   }
   .nav-Container {
     opacity: 0;
   }
+  .profileContainer {
+    margin-left: 5%;
+    width: 100%;
+  }
+  .profileContainer h1 {
+    font-size: 38px;
+    letter-spacing: 4px;
+  }
+  .profileContainer p {
+    font-size: 18px;
+    width: 95%;
+  }
+  /*===-------------------BURGER-MENU===*/
   .hamburger-menu {
     display: block;
   }
@@ -235,21 +266,54 @@ nav ul li a {
   #home {
     max-width: 769px;
     display: grid;
-    grid-template-columns: 0 0.5fr 0.6fr;
+    grid-template-columns: 1fr;
+  }
+  .nav-Container {
+    display: none;
+  }
+  .profileContainer {
+    margin-left: 5%;
+    width: 100%;
+  }
+  .profileContainer h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+  }
+  .profileContainer p {
+    width: 90%;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 641px) {
   #home {
-    max-width: 641px;
+    max-width: 630px;
     display: grid;
-    grid-template-columns: 0 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .nav-Container {
+    display: none;
+  }
+  .profileContainer {
+    margin-left: 5%;
+  }
+  .profileContainer p {
+    width: 95%;
   }
 }
 @media screen and (max-width: 481px) {
   #home {
-    max-width: 481px;
-    display: grid;
-    grid-template-columns: 0 1fr 1fr;
+    max-width: 95%;
+    display: flex;
+  }
+  .nav-Container {
+    display: none;
+  }
+  .profileContainer {
+    margin-left: 8%;
+    width: 100%;
+  }
+  .profileContainer h1 {
+    font-size: 24px;
   }
 }

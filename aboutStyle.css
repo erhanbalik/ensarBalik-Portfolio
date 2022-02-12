@@ -13,6 +13,7 @@
 
   /*==================FONT-Size======================*/
   --noneActiveText: grey;
+  --noneHover: rgb(160, 160, 160);
 }
 
 /*================== CUSTOM-FONTs ======================*/
@@ -35,8 +36,8 @@
 
 body {
   background-color: rgb(0, 0, 0);
-  overflow: hidden;
-  max-width: 1920px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 a {
@@ -45,6 +46,63 @@ a {
 
 li {
   list-style-type: none;
+}
+
+/*================== Hamburgermenu ======================*/
+.hamburger-menu {
+  display: none;
+}
+#menu-toggle {
+  display: none;
+}
+#menu-open {
+  transition: 300ms all;
+  margin-left: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+#menu-toggle:checked + label i {
+  transition: 300ms all;
+}
+
+#menu-toggle:checked ~ .menu ul li {
+  transform: translateX(100%);
+  transition: 300ms all;
+}
+.menu {
+  transform: translateX(-100%);
+  position: absolute;
+}
+.menu nav ul li {
+  width: 100vh;
+  background-color: rgba(41, 41, 41, 0.95);
+}
+.menu nav ul li a {
+  padding-left: 10%;
+}
+.hamburger-menu i {
+  font-size: 30px;
+}
+.social-media li {
+  display: flex;
+  flex-direction: row;
+}
+.menu .social-media li a i {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+  color: #fff;
+}
+.menu .social-media li a i h4 {
+  padding: 0 10px;
+  color: #fff;
+  font-family: var(--title-poppins);
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 /*================== HOME ======================*/
@@ -62,13 +120,46 @@ li {
 }
 .navbar {
   margin-left: 50px;
-  margin-top: 90%;
+  margin-top: 80%;
 }
 nav ul li a {
   font-family: var(--title-poppins);
   font-size: 60px;
   font-weight: var(--light-100);
   color: var(--noneActiveText);
+}
+/* -------------------SOCIAL MEDIA -----------------*/
+.socialmedia {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 20%;
+}
+
+.socialmedia h2 {
+  font-family: var(--title-poppins);
+  color: var(--noneHover);
+}
+.socialmedia i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 10px 0;
+  color: var(--noneHover);
+}
+.socialmedia i h4 {
+  padding: 0 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: var(--title-poppins);
+  color: var(--noneHover);
+}
+.socialmedia i:hover,
+.socialmedia h4:hover {
+  color: white;
 }
 
 /*================== ABOUT ======================*/
@@ -77,7 +168,7 @@ nav ul li a {
   color: white;
 }
 .about {
-  margin-top: 10%;
+  margin-top: 0%;
 }
 .aboutContainer {
   width: 90%;
@@ -178,11 +269,13 @@ h2:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
-  .nav-Container,
   .aboutContainer {
-    margin-left: -50%;
+    margin-left: 50%;
+  }
+  .nav-Container {
+    display: none;
   }
 
   .aboutContainer h1 {
@@ -198,6 +291,10 @@ h2:hover {
     transform: scale(1);
     letter-spacing: 0px;
   }
+  /*===-------------------BURGER-MENU===*/
+  .hamburger-menu {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -208,11 +305,11 @@ h2:hover {
     align-items: center;
     justify-content: center;
   }
-  .nav-Container {
-    visibility: hidden;
-  }
   .aboutContainer {
-    margin-left: -40%;
+    margin-left: 10%;
+  }
+  .nav-Container {
+    display: none;
   }
 
   .aboutContainer h1 {
@@ -239,9 +336,11 @@ h2:hover {
     align-items: center;
     justify-content: center;
   }
-  .nav-Container,
   .aboutContainer {
-    margin-left: -20%;
+    margin-left: 10%;
+  }
+  .nav-Container {
+    display: none;
   }
   .aboutContainer h1:hover,
   h2:hover {
@@ -258,6 +357,6 @@ h2:hover {
     justify-content: center;
   }
   .aboutContainer {
-    margin-left: -8%;
+    margin-left: 2%;
   }
 }

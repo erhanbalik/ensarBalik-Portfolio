@@ -13,6 +13,7 @@
 
   /*==================FONT-Size======================*/
   --noneActiveText: grey;
+  --noneHover: rgb(160, 160, 160);
 }
 
 /*================== CUSTOM-FONTs ======================*/
@@ -35,7 +36,7 @@
 
 body {
   background-color: rgb(0, 0, 0);
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -47,11 +48,69 @@ li {
   list-style-type: none;
 }
 
+/*================== Hamburgermenu ======================*/
+.hamburger-menu {
+  display: none;
+  z-index: 99;
+}
+#menu-toggle {
+  display: none;
+}
+#menu-open {
+  transition: 300ms all;
+  margin-left: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+#menu-toggle:checked + label i {
+  transition: 300ms all;
+}
+
+#menu-toggle:checked ~ .menu ul li {
+  transform: translateX(100%);
+  transition: 300ms all;
+}
+.menu {
+  transform: translateX(-100%);
+  position: absolute;
+}
+.menu nav ul li {
+  width: 100vh;
+  background-color: rgb(34, 34, 34);
+}
+.menu nav ul li a {
+  padding-left: 10%;
+}
+.hamburger-menu i {
+  font-size: 30px;
+}
+.social-media li {
+  display: flex;
+  flex-direction: row;
+}
+.menu .social-media li a i {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+  color: #fff;
+}
+.menu .social-media li a i h4 {
+  padding: 0 10px;
+  color: #fff;
+  font-family: var(--title-poppins);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 /*================== HOME ======================*/
 #home {
   max-width: 100%;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr;
 }
 .nav-Container {
   width: 100%;
@@ -73,7 +132,39 @@ nav ul li a {
 .active {
   color: white;
 }
+/* -------------------SOCIAL MEDIA -----------------*/
+.socialmedia {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 20%;
+}
 
+.socialmedia h2 {
+  font-family: var(--title-poppins);
+  color: var(--noneHover);
+}
+.socialmedia i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 10px 0;
+  color: var(--noneHover);
+}
+.socialmedia i h4 {
+  padding: 0 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: var(--title-poppins);
+  color: var(--noneHover);
+}
+.socialmedia i:hover,
+.socialmedia h4:hover {
+  color: white;
+}
 /*================== CONTACT ======================*/
 .contact-container {
   text-align: center;
@@ -274,14 +365,14 @@ button:hover {
   #home {
     max-width: 967px;
     display: grid;
-    grid-template-columns: 0 0.5fr 0.6fr;
+    grid-template-columns: 0.5fr 0.6fr;
   }
   .nav-Container {
-    opacity: 0;
+    display: none;
   }
   .contact-container {
-    margin-left: 50%;
-    margin-top: 55%;
+    margin-left: 40%;
+    margin-top: 30%;
   }
   .side1 {
     margin-left: -220%;
@@ -293,17 +384,24 @@ button:hover {
     width: 600px;
     height: 550px;
   }
+  /*===-------------------BURGER-MENU===*/
+  .hamburger-menu {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 769px) {
   #home {
     max-width: 769px;
     display: grid;
-    grid-template-columns: 0 0.5fr 0.6fr;
+    grid-template-columns: 0.5fr 0.6fr;
+  }
+  .nav-Container {
+    display: none;
   }
   .contact-container {
-    margin-left: 50%;
-    margin-top: 70%;
+    margin-left: 40%;
+    margin-top: 30%;
   }
   .side1 {
     margin-left: -150%;
@@ -320,11 +418,11 @@ button:hover {
   #home {
     max-width: 641px;
     display: grid;
-    grid-template-columns: 0 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .contact-container {
     margin-left: 40%;
-    margin-top: 80%;
+    margin-top: 30%;
   }
   form {
     width: 400px;
@@ -340,14 +438,19 @@ button:hover {
   }
 }
 @media screen and (max-width: 481px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    height: max-content;
+  }
   #home {
-    max-width: 481px;
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 0 1fr 1fr;
+    grid-template-columns: 0.5fr 0.5fr;
   }
   .contact-container {
-    margin-left: 40%;
-    margin-top: 80%;
+    margin-left: 10%;
+    margin-top: 30%;
   }
   form {
     width: 350px;
