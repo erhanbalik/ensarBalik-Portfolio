@@ -35,8 +35,8 @@
 
 body {
   background-color: rgb(0, 0, 0);
-  overflow: hidden;
-  max-width: 1920px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 a {
@@ -49,7 +49,7 @@ li {
 
 /*================== HOME ======================*/
 #home {
-  max-width: 1920px;
+  max-width: 100%;
 }
 .nav-Container {
   width: 100%;
@@ -59,71 +59,58 @@ li {
   justify-content: left;
 }
 .navbar {
-  margin-left: 50px;
+  margin-left: 0.5%;
 }
-nav ul li a {
+.text-hover {
   font-family: var(--title-poppins);
-  font-size: 200px;
+  font-size: 230px;
   font-weight: var(--bold-600);
 }
-nav ul li a:hover {
+.text-hover:hover {
   animation-name: anim;
-  animation-duration: 0.6s;
+  animation-duration: 0.5s;
   animation-timing-function: linear;
-  font-weight: var(--light-100);
 }
+
 @keyframes anim {
-  0% {
-    font-weight: var(--bold-600);
-  }
   10% {
-    letter-spacing: -2px;
-    font-weight: var(--regular-400);
+    font-size: 240px;
   }
-  20% {
-    font-weight: var(--light-300);
-  }
-  30% {
-    letter-spacing: -7px;
-    font-weight: var(--light-200);
-  }
-  40% {
-    letter-spacing: -2px;
-    font-weight: var(--light-100);
-  }
-
   50% {
-    letter-spacing: 0px;
-    font-weight: var(--light-200);
-  }
-  60% {
-    letter-spacing: 2px;
-    font-weight: var(--light-200);
-  }
-
-  70% {
-    letter-spacing: 7px;
-    font-weight: var(--light-200);
-  }
-  80% {
-    letter-spacing: 2px;
-    font-weight: var(--light-200);
-  }
-  90% {
-    letter-spacing: 0px;
-    font-weight: var(--light-200);
+    font-size: 235px;
   }
   100% {
-    letter-spacing: 0px;
-    font-weight: var(--light-100);
+    font-size: 230px;
   }
 }
 /*================== MEDIA ======================*/
 
 @media screen and (max-width: 1441px) {
-  nav ul li a {
-    font-family: var(--title-poppins);
-    font-size: 170px;
-    font-weight: var(--bold-600);
+  .text-hover {
+    font-size: 220px;
+  }
+}
+@media screen and (max-width: 1201px) {
+  .text-hover {
+    font-size: 200px;
+  }
+}
+@media screen and (max-width: 981px) {
+  .text-hover {
+    font-size: 140px;
+  }
+  .text-hover:hover {
+    animation-name: none;
+    animation-duration: 0s;
+  }
+}
+@media screen and (max-width: 641px) {
+  .text-hover {
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .text-hover {
+    font-size: 80px;
   }
 }
